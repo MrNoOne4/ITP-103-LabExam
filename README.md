@@ -63,8 +63,3 @@ No external ActiveMQ installation is needed because the broker is embedded for t
 - Task 4: show XML input and JSON output.
 - Task 5: show retry attempts, successful retry, and permanent failure going to the error queue.
 
-## Important Submission Note
-
-The official ITP103 rubric gives 10 points each to Tasks 1-5, with Excellent meaning the message channel is fully functional, routing is correct, aggregation has no consolidation errors, translation has no data loss, and error handling properly routes errors and retries. Documentation is 20 points, Presentation is 10, and Timeliness is 20.
-
-This implementation intentionally uses **JMS/ActiveMQ instead of RabbitMQ**. The lab requirement permits JMS, RabbitMQ, or Kafka for the message channel. If your instructor specifically requires RabbitMQ despite the general rubric, that specific instruction should be followed instead.
