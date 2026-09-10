@@ -1,4 +1,4 @@
-# ITP103 Hospital EIP - JMS Version (No RabbitMQ)
+# ITP103 Hospital EIP
 
 This version keeps the Hospital Enterprise Integration Patterns project **without RabbitMQ**.
 Instead, Task 1 and the error channel use a real **JMS queue backed by an embedded Apache ActiveMQ 6 broker**.
