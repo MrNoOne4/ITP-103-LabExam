@@ -21,8 +21,6 @@ public class HospitalRouteTester implements CommandLineRunner {
 
         System.out.println();
         System.out.println("==============================================================");
-        System.out.println("              HOSPITAL EIP LAB - JMS VERSION");
-        System.out.println("==============================================================");
         System.out.println("Apache Camel + Spring Boot + JMS + Embedded ActiveMQ 6");
         System.out.println("RabbitMQ is NOT required.");
         System.out.println("==============================================================");
