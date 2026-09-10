@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Hospital EIP System</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =========================================================
+         SIDEBAR
+         ========================================================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="logo">
+                H+
+            </div>
+
+            <div>
+                <h1>Hospital EIP</h1>
+                <span>Integration System</span>
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <button
+                class="nav-btn active"
+                onclick="showPage('dashboard')"
+            >
+                <span>▣</span>
+                Dashboard
+            </button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showPage('task1')"
+            >
+                <span>➜</span>
+                Message Channel
+            </button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showPage('task2')"
+            >
+                <span>◆</span>
+                Content Router
+            </button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showPage('task3')"
+            >
+                <span>⌘</span>
+                Aggregator
+            </button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showPage('task4')"
+            >
+                <span>{ }</span>
+                XML → JSON
+            </button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showPage('task5')"
+            >
+                <span>⚠</span>
+                Error & Retry
+            </button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showPage('architecture')"
+            >
+                <span>◎</span>
+                Architecture
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>System Online</strong>
+                    <small>Spring Boot + Camel</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         MAIN
+         ========================================================= -->
+
+    <main class="main">
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h2 id="pageTitle">
+                    Hospital EIP Dashboard
+                </h2>
+
+                <p id="pageDescription">
+                    Enterprise Integration Patterns
+                </p>
+
+            </div>
+
+
+            <div class="server-status">
+
+                <span class="status-dot"></span>
+
+                localhost:8080
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             DASHBOARD
+             ===================================================== -->
+
+        <section
+            id="dashboard"
+            class="page active"
+        >
+
+            <div class="welcome">
+
+                <div>
+
+                    <span class="eyebrow">
+                        HOSPITAL INTEGRATION PLATFORM
+                    </span>
+
+                    <h1>
+                        Hospital EIP
+                        <span>Control Center</span>
+                    </h1>
+
+                    <p>
+                        Manage and test Apache Camel Enterprise
+                        Integration Patterns through a simple
+                        hospital interface.
+                    </p>
+
+                </div>
+
+                <div class="welcome-icon">
+                    +
+                </div>
+
+            </div>
+
+
+            <!-- STAT CARDS -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        JMS
+                    </div>
+
+                    <div>
+                        <span>Message Broker</span>
+                        <strong>ActiveMQ</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+                        <span>Integration Engine</span>
+                        <strong>Apache Camel</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        5
+                    </div>
+
+                    <div>
+                        <span>EIP Tasks</span>
+                        <strong>Available</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        ●
+                    </div>
+
+                    <div>
+                        <span>Server</span>
+                        <strong>Online</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TASK GRID -->
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Integration Patterns</h2>
+                    <p>Select an EIP task to begin.</p>
+                </div>
+
+            </div>
+
+
+            <div class="task-grid">
+
+
+                <div
+                    class="task-card"
+                    onclick="showPage('task1')"
+                >
+
+                    <div class="task-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Message Channel
+                    </h3>
+
+                    <p>
+                        Send patient registration messages
+                        through the JMS hospital.patient queue.
+                    </p>
+
+                    <span class="task-link">
+                        Open Task →
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="task-card"
+                    onclick="showPage('task2')"
+                >
+
+                    <div class="task-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Content-Based Router
+                    </h3>
+
+                    <p>
+                        Automatically route patients to
+                        Emergency, Outpatient or Laboratory.
+                    </p>
+
+                    <span class="task-link">
+                        Open Task →
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="task-card"
+                    onclick="showPage('task3')"
+                >
+
+                    <div class="task-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Aggregator
+                    </h3>
+
+                    <p>
+                        Combine patient, doctor and laboratory
+                        information using Patient ID.
+                    </p>
+
+                    <span class="task-link">
+                        Open Task →
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="task-card"
+                    onclick="showPage('task4')"
+                >
+
+                    <div class="task-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Message Translator
+                    </h3>
+
+                    <p>
+                        Convert laboratory XML messages
+                        into hospital JSON format.
+                    </p>
+
+                    <span class="task-link">
+                        Open Task →
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="task-card"
+                    onclick="showPage('task5')"
+                >
+
+                    <div class="task-number">
+                        05
+                    </div>
+
+                    <h3>
+                        Error Handling & Retry
+                    </h3>
+
+                    <p>
+                        Demonstrate transient failures,
+                        retries and the JMS error channel.
+                    </p>
+
+                    <span class="task-link">
+                        Open Task →
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="task-card architecture-card"
+                    onclick="showPage('architecture')"
+                >
+
+                    <div class="task-number">
+                        06
+                    </div>
+
+                    <h3>
+                        EIP Architecture
+                    </h3>
+
+                    <p>
+                        View the complete hospital integration
+                        architecture and message flow.
+                    </p>
+
+                    <span class="task-link">
+                        View Architecture →
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TASK 1
+             ===================================================== -->
+
+        <section
+            id="task1"
+            class="page"
+        >
+
+            <div class="task-header">
+
+                <div class="big-number">
+                    01
+                </div>
+
+                <div>
+                    <span class="eyebrow">
+                        ENTERPRISE INTEGRATION PATTERN
+                    </span>
+
+                    <h1>Message Channel</h1>
+
+                    <p>
+                        Patient Registration → Apache Camel →
+                        JMS hospital.patient
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="content-grid">
+
+                <div class="panel">
+
+                    <h2>Patient Registration</h2>
+
+                    <p class="panel-description">
+                        Create a patient registration message
+                        and send it through the JMS message channel.
+                    </p>
+
+
+                    <form id="task1Form">
+
+                        <label>
+                            Patient ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="task1PatientId"
+                            placeholder="P-2026-001"
+                            required
+                        >
+
+
+                        <label>
+                            Patient Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="task1PatientName"
+                            placeholder="Juan Dela Cruz"
+                            required
+                        >
+
+
+                        <label>
+                            Department
+                        </label>
+
+                        <select id="task1Department">
+
+                            <option value="Emergency">
+                                Emergency
+                            </option>
+
+                            <option value="Outpatient">
+                                Outpatient
+                            </option>
+
+                            <option value="Laboratory">
+                                Laboratory
+                            </option>
+
+                        </select>
+
+
+                        <button
+                            type="submit"
+                            class="primary-btn"
+                        >
+                            Send Patient Registration
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <h2>Message Flow</h2>
+
+                    <div class="flow">
+
+                        <div class="flow-item">
+                            <span>1</span>
+                            Patient Registration
+                        </div>
+
+                        <div class="flow-arrow">
+                            ↓
+                        </div>
+
+                        <div class="flow-item">
+                            <span>2</span>
+                            Apache Camel
+                        </div>
+
+                        <div class="flow-arrow">
+                            ↓
+                        </div>
+
+                        <div class="flow-item highlight">
+                            <span>3</span>
+                            JMS: hospital.patient
+                        </div>
+
+                        <div class="flow-arrow">
+                            ↓
+                        </div>
+
+                        <div class="flow-item">
+                            <span>4</span>
+                            Hospital Consumer
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TASK 2
+             ===================================================== -->
+
+        <section
+            id="task2"
+            class="page"
+        >
+
+            <div class="task-header">
+
+                <div class="big-number">
+                    02
+                </div>
+
+                <div>
+
+                    <span class="eyebrow">
+                        ENTERPRISE INTEGRATION PATTERN
+                    </span>
+
+                    <h1>Content-Based Router</h1>
+
+                    <p>
+                        Route patients according to department.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-grid">
+
+                <div class="panel">
+
+                    <h2>Route Patient</h2>
+
+                    <p class="panel-description">
+                        Camel checks the department and sends
+                        the message to the correct JMS queue.
+                    </p>
+
+
+                    <form id="task2Form">
+
+                        <label>
+                            Patient ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="task2PatientId"
+                            placeholder="P-2026-001"
+                            required
+                        >
+
+
+                        <label>
+                            Department
+                        </label>
+
+                        <select id="task2Department">
+
+                            <option value="Emergency">
+                                Emergency
+                            </option>
+
+                            <option value="Outpatient">
+                                Outpatient
+                            </option>
+
+                            <option value="Laboratory">
+                                Laboratory
+                            </option>
+
+                            <option value="Unknown">
+                                Unknown / Manual Review
+                            </option>
+
+                        </select>
+
+
+                        <button
+                            type="submit"
+                            class="primary-btn"
+                        >
+                            Route Patient
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <h2>Routing Destinations</h2>
+
+                    <div class="route-list">
+
+                        <div class="route emergency">
+
+                            <strong>Emergency</strong>
+
+                            <span>
+                                hospital.emergency
+                            </span>
+
+                        </div>
+
+
+                        <div class="route outpatient">
+
+                            <strong>Outpatient</strong>
+
+                            <span>
+                                hospital.outpatient
+                            </span>
+
+                        </div>
+
+
+                        <div class="route laboratory">
+
+                            <strong>Laboratory</strong>
+
+                            <span>
+                                hospital.laboratory
+                            </span>
+
+                        </div>
+
+
+                        <div class="route manual">
+
+                            <strong>Unknown</strong>
+
+                            <span>
+                                hospital.manual-review
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TASK 3
+             ===================================================== -->
+
+        <section
+            id="task3"
+            class="page"
+        >
+
+            <div class="task-header">
+
+                <div class="big-number">
+                    03
+                </div>
+
+                <div>
+
+                    <span class="eyebrow">
+                        ENTERPRISE INTEGRATION PATTERN
+                    </span>
+
+                    <h1>Patient Aggregator</h1>
+
+                    <p>
+                        Combine three related messages using
+                        Patient ID as the correlation identifier.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel wide">
+
+                <h2>Patient Medical Information</h2>
+
+                <p class="panel-description">
+                    The system collects three messages:
+                    Patient Information, Doctor Assessment
+                    and Laboratory Result.
+                </p>
+
+
+                <form id="task3Form">
+
+                    <div class="form-grid">
+
+                        <div>
+
+                            <label>
+                                Patient ID
+                            </label>
+
+                            <input
+                                type="text"
+                                id="task3PatientId"
+                                value="P-2026-001"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label>
+                                Patient Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="task3PatientName"
+                                value="Juan Dela Cruz"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label>
+                                Doctor
+                            </label>
+
+                            <input
+                                type="text"
+                                id="task3Doctor"
+                                value="Dr. Santos"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label>
+                                Assessment
+                            </label>
+
+                            <input
+                                type="text"
+                                id="task3Assessment"
+                                value="Fever"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label>
+                                Laboratory Test
+                            </label>
+
+                            <input
+                                type="text"
+                                id="task3Test"
+                                value="CBC"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label>
+                                Laboratory Result
+                            </label>
+
+                            <input
+                                type="text"
+                                id="task3Result"
+                                value="Normal"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Aggregate Patient Information
+                    </button>
+
+                </form>
+
+
+                <div class="aggregation-visual">
+
+                    <div class="aggregation-box">
+                        Patient
+                    </div>
+
+                    <div class="plus">+</div>
+
+                    <div class="aggregation-box">
+                        Doctor
+                    </div>
+
+                    <div class="plus">+</div>
+
+                    <div class="aggregation-box">
+                        Laboratory
+                    </div>
+
+                    <div class="plus">+</div>
+
+                    <div class="aggregation-result">
+                        Medical Summary
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TASK 4
+             ===================================================== -->
+
+        <section
+            id="task4"
+            class="page"
+        >
+
+            <div class="task-header">
+
+                <div class="big-number">
+                    04
+                </div>
+
+                <div>
+
+                    <span class="eyebrow">
+                        ENTERPRISE INTEGRATION PATTERN
+                    </span>
+
+                    <h1>Message Translator</h1>
+
+                    <p>
+                        Transform laboratory XML into hospital JSON.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-grid">
+
+                <div class="panel">
+
+                    <h2>Laboratory Information</h2>
+
+                    <form id="task4Form">
+
+                        <label>
+                            Patient ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="task4PatientId"
+                            value="P-2026-001"
+                            required
+                        >
+
+
+                        <label>
+                            Patient Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="task4PatientName"
+                            value="Juan Dela Cruz"
+                            required
+                        >
+
+
+                        <label>
+                            Test
+                        </label>
+
+                        <input
+                            type="text"
+                            id="task4Test"
+                            value="Complete Blood Count"
+                            required
+                        >
+
+
+                        <label>
+                            Result
+                        </label>
+
+                        <input
+                            type="text"
+                            id="task4Result"
+                            value="Normal"
+                            required
+                        >
+
+
+                        <button
+                            type="submit"
+                            class="primary-btn"
+                        >
+                            Translate XML → JSON
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <h2>Translation</h2>
+
+                    <div class="code-box">
+
+                        <div class="code-title">
+                            XML INPUT
+                        </div>
+
+                        <pre id="xmlPreview"><PatientResult>
+    <PatientId>P-2026-001</PatientId>
+    <PatientName>Juan Dela Cruz</PatientName>
+    <Test>Complete Blood Count</Test>
+    <Result>Normal</Result>
+</PatientResult></pre>
+
+                    </div>
+
+
+                    <div class="translation-arrow">
+                        ↓
+                    </div>
+
+
+                    <div class="code-box json-box">
+
+                        <div class="code-title">
+                            JSON OUTPUT
+                        </div>
+
+                        <pre id="jsonOutput">{
+    "patientId": "...",
+    "patientName": "...",
+    "test": "...",
+    "result": "..."
+}</pre>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TASK 5
+             ===================================================== -->
+
+        <section
+            id="task5"
+            class="page"
+        >
+
+            <div class="task-header">
+
+                <div class="big-number danger-number">
+                    05
+                </div>
+
+                <div>
+
+                    <span class="eyebrow">
+                        ENTERPRISE INTEGRATION PATTERN
+                    </span>
+
+                    <h1>Error Handling & Retry</h1>
+
+                    <p>
+                        Demonstrate transient and permanent failures.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-grid">
+
+                <div class="panel">
+
+                    <h2>Failure Simulation</h2>
+
+                    <p class="panel-description">
+                        Choose a failure type to test Camel's
+                        Dead Letter Channel.
+                    </p>
+
+
+                    <form id="task5Form">
+
+                        <label>
+                            Patient ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="task5PatientId"
+                            value="P-RETRY-001"
+                            required
+                        >
+
+
+                        <label>
+                            Error Type
+                        </label>
+
+                        <select id="task5Type">
+
+                            <option value="transient">
+                                Transient Error
+                            </option>
+
+                            <option value="permanent">
+                                Permanent Error
+                            </option>
+
+                        </select>
+
+
+                        <button
+                            type="submit"
+                            class="primary-btn"
+                        >
+                            Run Error Test
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <h2>Retry Process</h2>
+
+                    <div class="retry-flow">
+
+                        <div class="retry-step">
+
+                            <div class="retry-circle">
+                                1
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Processing
+                                </strong>
+
+                                <span>
+                                    Hospital Processing System
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="retry-line"></div>
+
+
+                        <div class="retry-step">
+
+                            <div class="retry-circle warning">
+                                2
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Retry
+                                </strong>
+
+                                <span>
+                                    Maximum 3 redeliveries
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="retry-line"></div>
+
+
+                        <div class="retry-step">
+
+                            <div class="retry-circle danger">
+                                3
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Error Queue
+                                </strong>
+
+                                <span>
+                                    hospital.error
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-cards">
+
+                <div class="info-card success-info">
+
+                    <strong>
+                        TRANSIENT ERROR
+                    </strong>
+
+                    <p>
+                        Fails twice and then succeeds.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card danger-info">
+
+                    <strong>
+                        PERMANENT ERROR
+                    </strong>
+
+                    <p>
+                        Continues failing and eventually
+                        reaches hospital.error.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ARCHITECTURE
+             ===================================================== -->
+
+        <section
+            id="architecture"
+            class="page"
+        >
+
+            <div class="task-header">
+
+                <div class="big-number">
+                    06
+                </div>
+
+                <div>
+
+                    <span class="eyebrow">
+                        SYSTEM ARCHITECTURE
+                    </span>
+
+                    <h1>Hospital EIP Architecture</h1>
+
+                    <p>
+                        Apache Camel enterprise integration flow.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="architecture-panel">
+
+                <div class="architecture-node main-node">
+                    Patient Registration
+                </div>
+
+                <div class="architecture-arrow">
+                    ↓
+                </div>
+
+                <div class="architecture-node">
+                    Apache Camel Producer
+                </div>
+
+                <div class="architecture-arrow">
+                    ↓
+                </div>
+
+                <div class="architecture-node jms-node">
+                    JMS Queue
+                    <small>
+                        hospital.patient
+                    </small>
+                </div>
+
+                <div class="architecture-arrow">
+                    ↓
+                </div>
+
+                <div class="architecture-node">
+                    Hospital Processing Consumer
+                </div>
+
+                <div class="architecture-arrow">
+                    ↓
+                </div>
+
+                <div class="architecture-node router-node">
+                    Content-Based Router
+                </div>
+
+
+                <div class="branch-container">
+
+                    <div class="branch">
+
+                        <strong>
+                            Emergency
+                        </strong>
+
+                        <span>
+                            hospital.emergency
+                        </span>
+
+                    </div>
+
+
+                    <div class="branch">
+
+                        <strong>
+                            Outpatient
+                        </strong>
+
+                        <span>
+                            hospital.outpatient
+                        </span>
+
+                    </div>
+
+
+                    <div class="branch">
+
+                        <strong>
+                            Laboratory
+                        </strong>
+
+                        <span>
+                            hospital.laboratory
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="architecture-arrow">
+                    ↓
+                </div>
+
+                <div class="architecture-node">
+                    Patient Aggregator
+                </div>
+
+                <div class="architecture-arrow">
+                    ↓
+                </div>
+
+                <div class="architecture-node">
+                    XML → JSON Translator
+                </div>
+
+                <div class="architecture-arrow">
+                    ↓
+                </div>
+
+                <div class="architecture-node error-node">
+                    Error Handler
+                    <small>
+                        hospital.error
+                    </small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             RESULT MODAL
+             ===================================================== -->
+
+        <div
+            id="resultModal"
+            class="modal"
+        >
+
+            <div class="modal-content">
+
+                <button
+                    class="modal-close"
+                    onclick="closeModal()"
+                >
+                    ×
+                </button>
+
+                <div
+                    id="modalIcon"
+                    class="modal-icon success"
+                >
+                    ✓
+                </div>
+
+                <h2 id="modalTitle">
+                    Success
+                </h2>
+
+                <p id="modalMessage">
+                    Operation completed.
+                </p>
+
+                <pre id="modalData"></pre>
+
+                <button
+                    class="primary-btn"
+                    onclick="closeModal()"
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

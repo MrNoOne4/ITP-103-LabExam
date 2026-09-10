@@ -1,6 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -11,10 +14,17 @@
     </parent>
 
     <groupId>com.hospital.eip</groupId>
+
     <artifactId>hospital-eip-interactive</artifactId>
+
     <version>2.0.0</version>
+
     <name>Hospital EIP Interactive - JMS</name>
-    <description>ITP103 Hospital Enterprise Integration Patterns using Apache Camel and embedded JMS/ActiveMQ 6</description>
+
+    <description>
+        Hospital Enterprise Integration Patterns using
+        Apache Camel, Spring Boot, JMS and ActiveMQ
+    </description>
 
     <properties>
         <java.version>17</java.version>
@@ -23,42 +33,59 @@
     </properties>
 
     <dependencies>
+
+        <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+        <!-- Spring Web / REST API -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Apache Camel -->
         <dependency>
             <groupId>org.apache.camel.springboot</groupId>
             <artifactId>camel-spring-boot-starter</artifactId>
             <version>${camel.version}</version>
         </dependency>
 
+        <!-- Apache Camel ActiveMQ 6 -->
         <dependency>
             <groupId>org.apache.camel.springboot</groupId>
             <artifactId>camel-activemq6-starter</artifactId>
             <version>${camel.version}</version>
         </dependency>
 
-        <!-- Required for Camel's embedded ActiveMQ 6 test broker. No external broker is needed. -->
+        <!-- ActiveMQ -->
         <dependency>
             <groupId>org.apache.activemq</groupId>
             <artifactId>activemq-broker</artifactId>
             <version>${activemq6.version}</version>
         </dependency>
 
+        <!-- JSON -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>
+
         <plugins>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
         </plugins>
+
     </build>
+
 </project>
